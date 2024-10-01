@@ -1,5 +1,7 @@
 package tech.springWebflux.reactiveSpringV2.model;
 
+import java.math.BigDecimal;
+
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
@@ -9,12 +11,12 @@ import lombok.Data;
 
 @Builder
 @Data
-@Table (name = "customers")
-public class Customer {
+@Table (name = "products")
+public class Product {
 
   @Id
-  @Column ("customer_id")
-  private Long customerId;
-  private String name;
-  private String email;
+  @Column ("product_id")
+  private Long productId;
+  private String description;
+  private BigDecimal price;
 }
